@@ -1,12 +1,23 @@
+import "./App.css";
+import Dashboard from "./compoents/Dashboard";
+import ForgotPassword from "./compoents/ForgotPassword";
+import StandardForm from "./compoents/StandardForm";
+import { Route, Routes, Router, BrowserRouter } from "react-router-dom";
 
-import './App.css';
-import StandardForm from './compoents/StandardForm';
 
 function App() {
   return (
-    <div className="App">
-     <StandardForm/>
-    </div>
+    <BrowserRouter>
+    <Routes>
+      <Route path="/" element={<StandardForm />} />
+      <Route path="/forgot-password" element={<ForgotPassword />} />
+      <Route path="/dashboard" element={<Dashboard />} />
+    </Routes>
+    </BrowserRouter>
+
+    // <div className="App">
+    //  <StandardForm/>
+    // </div>
   );
 }
 
